@@ -1,3 +1,4 @@
+`# Data-Analyst-NavdeepSingh`
 # 📊 AWS Portfolio Project – Academic Standing Policy (9023p)
 
 ## 📘 Project Title  
@@ -26,7 +27,7 @@ Descriptive analysis played a key role in this project. Using Amazon Athena, I w
 ![Athena Query Min CGPA](./Screenshot%20(78).png)
 ![Grouped by Enrollment Year](./Screenshot%20(98).png)
 
-## 🧪 Additional Insights and Wrangling  
+## 🧪 Data Wrangling (ETL) 
 
 To support clean and accurate descriptive analysis, I used AWS Glue DataBrew to perform data wrangling. Through recipe jobs, I removed null values, standardized data formats, transformed column names, and joined student-related datasets. This preprocessing ensured the data fed into Athena was reliable and free of inconsistencies. Additionally, I implemented a Glue Visual ETL job that included a quality check condition. Records were routed based on validation outcomes — clean data was stored in a "Passed" folder, while incorrect or incomplete data was logged in a "Failed" folder. This modular quality control mechanism added reliability and made the data analysis process more robust and trustworthy.
 
@@ -48,8 +49,18 @@ To monitor the data pipeline and user activity, I used Amazon CloudWatch and AWS
 ![CloudTrail Summary](./Screenshot%20(151).png)
 
 ## 🛠️ Tools and Technologies  
-
-This project was implemented using a combination of AWS services that together provided a complete, secure, and automated cloud solution. Amazon S3 was used for structured data storage. AWS Glue and Glue DataBrew were used to catalog, clean, and transform data. Amazon Athena provided serverless SQL querying capabilities. Security was enforced using AWS KMS for encryption, and governance was supported through bucket versioning, replication, and lifecycle policies. Amazon CloudWatch and CloudTrail were used to monitor system health, usage, and user activity. Access control was managed through AWS IAM roles and permissions.
+ 
+ Amazon S3 – for structured data storage and backup
+ 
+ AWS Glue / DataBrew – for data transformation and schema management
+ 
+ Amazon Athena – for serverless SQL queries on S3 data
+ 
+ AWS KMS – for encryption and data protection
+ 
+ Amazon CloudWatch & CloudTrail – for monitoring, logging, and operational insights
+ 
+ IAM Roles – for access control and permission boundaries
 
 ## 📤 Deliverables  
 
