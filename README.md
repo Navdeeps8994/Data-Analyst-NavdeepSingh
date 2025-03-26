@@ -16,7 +16,7 @@ The main objective of this project was to build a data-driven, cloud-native solu
 
 The dataset used in this project consisted of student academic records, which included student ID, name, enrollment year, academic program, GPA, CGPA, and the actions taken based on their performance. These datasets were stored in structured CSV and Parquet formats across three Amazon S3 buckets: `registrar-raw-nav`, `registrar-trf-nav`, and `registrar-cur-nav`. Each bucket was organized using logical prefixes such as year, quarter, and server, allowing efficient querying and partitioning. AWS Glue Crawlers were used to catalog the datasets into the Glue Data Catalog, enabling seamless SQL querying via Amazon Athena. This setup formed the foundation for reliable and reusable data pipelines and ensured that all academic records were accessible and query-ready in the cloud environment.
 
-![Dataset in S3](./Screenshot%20(66).png)
+![Dataset in S3](IMAGE/Screenshot (66).png)
 ![Glue Catalog](./Screenshot%20(96).png)
 
 ## 📊 Descriptive Analysis  
