@@ -41,7 +41,11 @@ Following the cataloging, AWS Glue DataBrew was employed to clean and prepare th
 ![Screenshot (94)](https://github.com/user-attachments/assets/bf354778-859a-4cad-9c61-cbad51b1fd83)
 ![Screenshot (95)](https://github.com/user-attachments/assets/4b005cb0-f180-43cf-b721-8531399a6927)
 
-## 🔐 Monitoring and Security  
+
+![Screenshot (66)](https://github.com/user-attachments/assets/86f295a1-31b2-46f8-9301-1cfa848010bc)
+![Screenshot (77)](https://github.com/user-attachments/assets/4d6df9fd-eda3-48ee-ae81-99466329dc9b)
+
+## 🔐 Monitoring and Security 
 
 ![Screenshot (188)](https://github.com/user-attachments/assets/f8f2fb0d-05ea-4cc7-9d90-d3e10f5a4700)
 
