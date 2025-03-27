@@ -1,12 +1,12 @@
 `# Data-Analyst-NavdeepSingh`
-# 📊 AWS Portfolio Project – Academic Standing Policy (9023p)
+# 📊 AWS Portfolio Project – UCW Academic Standing Policy (9023p)
 
 ## 📘 Project Title  
 **Academic Performance Analysis and Monitoring using AWS for Policy 9023p**
 
 ## 📄 Project Overview  
 
-This portfolio showcases a cloud-based data analytics solution developed using AWS to support the analysis and monitoring of academic performance under University Canada West’s Academic Standing Policy (9023p). The project was completed as part of the AWS Academy Cloud Foundations course and focuses on descriptive analysis and infrastructure monitoring. The policy defines how student performance is assessed based on GPA and CGPA to determine academic standing statuses such as Good Standing, Alert, Probation, Suspension, or Required to Withdraw. The solution utilizes Amazon S3 for data storage, AWS Glue and DataBrew for data wrangling, Amazon Athena for querying, and CloudWatch and CloudTrail for monitoring. Through this project, I gained hands-on experience in securely storing, transforming, analyzing, and monitoring academic datasets in a cloud environment while aligning with real-world institutional requirements.
+This portfolio showcases a cloud-based data analytics solution developed using AWS to support the analysis and monitoring of academic performance under University Canada West’s Registrar office-Academic Standing Policy (9023p). The project was completed as part of the AWS Academy Cloud Foundations course and focuses on descriptive analysis and infrastructure monitoring. The policy defines how student performance is assessed based on GPA and CGPA to determine academic standing statuses such as Good Standing, Alert, Probation, Suspension, or Required to Withdraw. The solution utilizes Amazon S3 for data storage, AWS Glue and DataBrew for data wrangling, Amazon Athena for querying, and CloudWatch and CloudTrail for monitoring. Through this project, I gained hands-on experience in securely storing, transforming, analyzing, and monitoring academic datasets in a cloud environment while aligning with real-world institutional requirements.
 
 ## 🎯 Objective  
 ![Screenshot (183)](https://github.com/user-attachments/assets/a8090f7b-9206-4d98-bc05-37e61dddda12)
