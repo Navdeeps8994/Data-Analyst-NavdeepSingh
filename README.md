@@ -83,3 +83,10 @@ The key deliverables of this project include a secure and automated AWS-based da
 ## ✅ Conclusion  
 
 This project offered hands-on experience with building a real-world data analytics and monitoring pipeline using AWS, fully aligned with academic policy requirements. Through descriptive analysis, security configuration, data wrangling, and monitoring implementation, I gained valuable skills in cloud-based data architecture. The Academic Standing Policy (9023p) was successfully mapped to AWS services, showing how institutions can make data-driven decisions while maintaining compliance, security, and operational transparency. This solution is scalable, secure, and ready for further expansion, such as predictive modeling or real-time student performance alerts.
+
+# Course Completion Badge
+
+https://www.credly.com/badges/0a82d39b-fd4d-4a99-80e5-7fa13e2fdbe3/print
+
+<img width="443" alt="image" src="https://github.com/user-attachments/assets/5624065e-fe1b-4df6-9de3-96ca5f640f2d" />
+
