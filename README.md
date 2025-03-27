@@ -9,10 +9,12 @@
 This portfolio showcases a cloud-based data analytics solution developed using AWS to support the analysis and monitoring of academic performance under University Canada West’s Academic Standing Policy (9023p). The project was completed as part of the AWS Academy Cloud Foundations course and focuses on descriptive analysis and infrastructure monitoring. The policy defines how student performance is assessed based on GPA and CGPA to determine academic standing statuses such as Good Standing, Alert, Probation, Suspension, or Required to Withdraw. The solution utilizes Amazon S3 for data storage, AWS Glue and DataBrew for data wrangling, Amazon Athena for querying, and CloudWatch and CloudTrail for monitoring. Through this project, I gained hands-on experience in securely storing, transforming, analyzing, and monitoring academic datasets in a cloud environment while aligning with real-world institutional requirements.
 
 ## 🎯 Objective  
+![Screenshot (183)](https://github.com/user-attachments/assets/a8090f7b-9206-4d98-bc05-37e61dddda12)
 
 The main objective of this project was to build a data-driven, cloud-native solution that could effectively analyze and monitor student performance in accordance with UCW’s Academic Standing Policy (9023p). This involved using AWS services to manage the full data lifecycle — from ingestion and wrangling to querying, analysis, and monitoring. The goal was to create meaningful insights that could support academic decisions such as issuing alerts, probation notices, or suspensions, while also ensuring the system followed best practices in security, automation, and monitoring.
 
 ## 🧾 Dataset  
+![Screenshot (184)](https://github.com/user-attachments/assets/5a112d8d-de52-4206-a3c6-be9a62f5e621)
 
 The primary dataset for this project was sourced from three essential files stored in the registrar-raw-nav Amazon S3 bucket. These files included the student list, course list, and standing list, each organized into separate folders. The student list contained comprehensive student details such as names, student IDs, dates of birth, academic programs, and CGPA. The course list provided information about all academic courses offered, including course codes, titles, and associated terms. Meanwhile, the standing list captured each student’s academic standing, indicating whether a student was in good standing, on probation, or facing suspension. These three datasets formed the backbone of the project, supporting further analysis related to the Academic Standing Policy (9023p). Their placement in S3 enabled seamless integration with AWS Glue and Athena for processing and querying.
 
@@ -41,7 +43,7 @@ Following the cataloging, AWS Glue DataBrew was employed to clean and prepare th
 
 ## 🔐 Monitoring and Security  
 
-![Screenshot (187)](https://github.com/user-attachments/assets/f6dec14a-113e-4830-ac24-4674bc733fd2)
+![Screenshot (188)](https://github.com/user-attachments/assets/f8f2fb0d-05ea-4cc7-9d90-d3e10f5a4700)
 
 Ensuring data security and system monitoring was a key part of this project. To secure student academic data, I enabled server-side encryption using AWS KMS with a custom key named `reg-ac-std-key-nav`. Each S3 bucket was encrypted, and versioning was turned on to protect against accidental deletions or overwrites. I also implemented cross-bucket replication rules to ensure backup and redundancy. Lifecycle policies were configured to manage storage efficiently by transitioning older files or automatically deleting temporary objects.  
 
@@ -50,6 +52,9 @@ To monitor the data pipeline and user activity, I used Amazon CloudWatch and AWS
 ![Screenshot (140)](https://github.com/user-attachments/assets/1a0e9405-2d2d-4d05-ba16-aa6a8f3fba41)
 ![Screenshot (142)](https://github.com/user-attachments/assets/1e49c8d0-4ca9-430a-acca-56d9e088425c)
 ![Screenshot (138)](https://github.com/user-attachments/assets/77f91168-b3ac-4074-92b8-20ddb275c6f6)
+
+![Screenshot (187)](https://github.com/user-attachments/assets/f6dec14a-113e-4830-ac24-4674bc733fd2)
+
 ![Screenshot (150)](https://github.com/user-attachments/assets/3a9f9abc-2961-4c52-a143-d853d4963b4c)
 ![Screenshot (151)](https://github.com/user-attachments/assets/3ccac5ec-2457-478e-aeaf-d2fd81bc8adf)
 
