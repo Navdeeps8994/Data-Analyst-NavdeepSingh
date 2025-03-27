@@ -41,6 +41,8 @@ Following the cataloging, AWS Glue DataBrew was employed to clean and prepare th
 
 ## 🔐 Monitoring and Security  
 
+![Screenshot (187)](https://github.com/user-attachments/assets/f6dec14a-113e-4830-ac24-4674bc733fd2)
+
 Ensuring data security and system monitoring was a key part of this project. To secure student academic data, I enabled server-side encryption using AWS KMS with a custom key named `reg-ac-std-key-nav`. Each S3 bucket was encrypted, and versioning was turned on to protect against accidental deletions or overwrites. I also implemented cross-bucket replication rules to ensure backup and redundancy. Lifecycle policies were configured to manage storage efficiently by transitioning older files or automatically deleting temporary objects.  
 
 To monitor the data pipeline and user activity, I used Amazon CloudWatch and AWS CloudTrail. CloudWatch dashboards provided real-time visibility into resource usage and data movement, while CloudTrail tracked API calls and user actions across AWS services. This helped establish a clear audit trail and supported compliance with institutional data governance policies. The logs were stored in a centralized `awslogs` bucket for review and retention.
