@@ -14,10 +14,11 @@ The main objective of this project was to build a data-driven, cloud-native solu
 
 ## 🧾 Dataset  
 
-The dataset used in this project consisted of student academic records, which included student ID, name, enrollment year, academic program, GPA, CGPA, and the actions taken based on their performance. These datasets were stored in structured CSV and Parquet formats across three Amazon S3 buckets: `registrar-raw-nav`, `registrar-trf-nav`, and `registrar-cur-nav`. Each bucket was organized using logical prefixes such as year, quarter, and server, allowing efficient querying and partitioning. AWS Glue Crawlers were used to catalog the datasets into the Glue Data Catalog, enabling seamless SQL querying via Amazon Athena. This setup formed the foundation for reliable and reusable data pipelines and ensured that all academic records were accessible and query-ready in the cloud environment.
+The primary dataset for this project was sourced from three essential files stored in the registrar-raw-nav Amazon S3 bucket. These files included the student list, course list, and standing list, each organized into separate folders. The student list contained comprehensive student details such as names, student IDs, dates of birth, academic programs, and CGPA. The course list provided information about all academic courses offered, including course codes, titles, and associated terms. Meanwhile, the standing list captured each student’s academic standing, indicating whether a student was in good standing, on probation, or facing suspension. These three datasets formed the backbone of the project, supporting further analysis related to the Academic Standing Policy (9023p). Their placement in S3 enabled seamless integration with AWS Glue and Athena for processing and querying.
 
-[![Dataset in S3](IMAGE/Screenshot (66).png)](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/a949fc44b69783c9d35d6ea6997412072353a964/IMAGE/Screenshot%20(66).png)
-![Glue Catalog](./Screenshot%20(96).png)
+![Dataset in S3][(IMAGE/Screenshot (182).png)](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/cc9c74c0dfd671f66f9fd15c82ae4630e12561f9/IMAGE/Screenshot%20(182).png)
+![Buckets][(./IMAGE/Screenshot (96).png)](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/0213f603af99ce04329c06ee743523b6397f7c58/IMAGE/Screenshot%20(181).png)
+
 
 ## 📊 Descriptive Analysis  
 
