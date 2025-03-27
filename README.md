@@ -8,6 +8,9 @@
 
 This portfolio showcases a cloud-based data analytics solution developed using AWS to support the analysis and monitoring of academic performance under University Canada West’s Registrar office-Academic Standing Policy (9023p). The project was completed as part of the AWS Academy Cloud Foundations course and focuses on descriptive analysis and infrastructure monitoring. The policy defines how student performance is assessed based on GPA and CGPA to determine academic standing statuses such as Good Standing, Alert, Probation, Suspension, or Required to Withdraw. The solution utilizes Amazon S3 for data storage, AWS Glue and DataBrew for data wrangling, Amazon Athena for querying, and CloudWatch and CloudTrail for monitoring. Through this project, I gained hands-on experience in securely storing, transforming, analyzing, and monitoring academic datasets in a cloud environment while aligning with real-world institutional requirements.
 
+## 🛠️ Project Process Overview
+To visually represent the flow of this project from raw data ingestion to final output and monitoring, the following diagram outlines the full cloud-based data analytics pipeline implemented using AWS services:
+![Screenshot 2025-03-26 204951](https://github.com/user-attachments/assets/381d6c96-a5a2-4355-8678-8921faedea17)
 ## 🎯 Objective  
 ![Screenshot (183)](https://github.com/user-attachments/assets/a8090f7b-9206-4d98-bc05-37e61dddda12)
 
