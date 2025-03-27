@@ -16,26 +16,29 @@ The main objective of this project was to build a data-driven, cloud-native solu
 
 The primary dataset for this project was sourced from three essential files stored in the registrar-raw-nav Amazon S3 bucket. These files included the student list, course list, and standing list, each organized into separate folders. The student list contained comprehensive student details such as names, student IDs, dates of birth, academic programs, and CGPA. The course list provided information about all academic courses offered, including course codes, titles, and associated terms. Meanwhile, the standing list captured each student’s academic standing, indicating whether a student was in good standing, on probation, or facing suspension. These three datasets formed the backbone of the project, supporting further analysis related to the Academic Standing Policy (9023p). Their placement in S3 enabled seamless integration with AWS Glue and Athena for processing and querying.
 
-![Dataset in S3][(IMAGE/Screenshot (182).png)](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/cc9c74c0dfd671f66f9fd15c82ae4630e12561f9/IMAGE/Screenshot%20(182).png)
-![Buckets][(./IMAGE/Screenshot (96).png)](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/0213f603af99ce04329c06ee743523b6397f7c58/IMAGE/Screenshot%20(181).png)
+![Dataset in S3](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/cc9c74c0dfd671f66f9fd15c82ae4630e12561f9/IMAGE/Screenshot%20(182).png)
+![Buckets](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/0213f603af99ce04329c06ee743523b6397f7c58/IMAGE/Screenshot%20(181).png)
 
 
 ## 📊 Descriptive Analysis  
 
 Descriptive analysis played a key role in this project. Using Amazon Athena, I wrote and executed SQL queries to summarize key student performance metrics. One of the initial queries calculated the overall average CGPA across all students, which resulted in approximately 2.703. This provided a baseline understanding of academic performance. To explore how performance varied across different student cohorts, I grouped the average CGPA by enrollment year. The results showed that academic outcomes fluctuated across years, offering useful insights for faculty or administration. Another important query identified the minimum CGPA in the dataset — 1.53 — highlighting the academic risk zone for some students. These statistics helped frame how academic standing correlates with real student data, making the policy more transparent and actionable. While the core focus was descriptive, some queries also filtered students based on academic flags, such as “probation” or “suspension,” bringing in slight elements of diagnostic analysis to make the results more useful for decision-making.
 
-![Athena Query Avg CGPA](./Screenshot%20(77).png)
-![Athena Query Min CGPA](./Screenshot%20(78).png)
-![Grouped by Enrollment Year](./Screenshot%20(98).png)
+![Athena Query Avg CGPA](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/3584045bf499d79dafa8bb6abb29329574301f76/IMAGE/Screenshot%20(96).png)
+![Athena Query Min CGPA](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/3584045bf499d79dafa8bb6abb29329574301f76/IMAGE/Screenshot%20(97).png)
+![Grouped by Enrollment Year](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/2a5bfaf15a4e308615337206d04d24f18105ea5f/IMAGE/Screenshot%20(98).png)
 
 ## 🧪 Data Wrangling (ETL) 
 
-To support clean and accurate descriptive analysis, I used AWS Glue DataBrew to perform data wrangling. Through recipe jobs, I removed null values, standardized data formats, transformed column names, and joined student-related datasets. This preprocessing ensured the data fed into Athena was reliable and free of inconsistencies. Additionally, I implemented a Glue Visual ETL job that included a quality check condition. Records were routed based on validation outcomes — clean data was stored in a "Passed" folder, while incorrect or incomplete data was logged in a "Failed" folder. This modular quality control mechanism added reliability and made the data analysis process more robust and trustworthy.
+To make the raw data usable for analysis, an end-to-end data wrangling process was implemented using AWS Glue and AWS Glue DataBrew. The process began with uploading the raw datasets to the registrar-raw-nav S3 bucket under structured folders labeled as student-list, course-list, and standing-list. These datasets were then crawled using AWS Glue Crawlers, which scanned the contents and generated metadata tables automatically within the registrar-data-catalog-nav Glue Data Catalog. This catalog allowed us to centrally manage and structure the data schema for querying later in Amazon Athena.
 
-![Parquet Output](./Screenshot%20(73).png)
-![DataBrew Recipe](./Screenshot%20(74).png)
-![ETL Quality Check](./Screenshot%20(144).png)
-![Passed Data](./Screenshot%20(145).png)
+Following the cataloging, AWS Glue DataBrew was employed to clean and prepare the data. DataBrew recipe jobs were created to perform transformations such as removing null values, eliminating duplicate entries, standardizing column headers, and formatting fields like cgpa (as a double) and enrollmentyear (as an integer). These transformations helped ensure consistency and readability across the datasets. After cleansing, the individual datasets were joined using shared identifiers to form a consolidated dataset that linked students with their courses and academic standings. This refined dataset was exported in Parquet format and saved into the registrar-trf-nav S3 bucket to enable efficient querying. This structured and clean dataset served as the basis for all further analysis in Athena, facilitating the project's descriptive analytics goals.
+
+
+![Glue Data Catalog Tables](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/e4cf352a8204ac14941bb559e33b067fe0cbb5f2/IMAGE/Screenshot%20(67).png)
+![DataBrew Recipe](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/2a5bfaf15a4e308615337206d04d24f18105ea5f/IMAGE/Screenshot%20(93).png)
+![DataBrew Output in S3](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/2a5bfaf15a4e308615337206d04d24f18105ea5f/IMAGE/Screenshot%20(94).png)
+![DataBrew Output in S3](https://github.com/Navdeeps8994/Data-Analyst-NavdeepSingh/blob/2a5bfaf15a4e308615337206d04d24f18105ea5f/IMAGE/Screenshot%20(95).png)
 
 ## 🔐 Monitoring and Security  
 
